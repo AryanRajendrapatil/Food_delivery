@@ -7,7 +7,7 @@ import Fooddisplay from '../../components/fooddisplay/Fooddisplay.jsx'
 
 
 const Home = () => {
-  const[category,setCategory] = useState('all')
+  const[category,setCategory] = useState('All')
   return (
     <div>
       <Header />

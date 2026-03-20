@@ -1,7 +1,7 @@
-import { createContext } from "react";
-import { food_list } from "../assets/frontend_assets/assets";
+import { createContext, useEffect, useState } from "react";
+import { food_list} from "../assets/frontend_assets/assets";
+
 export const storeContext = createContext(null)
-import { useState } from "react";   
 const StoreContextProvider = (props) => {
     const [cartItems,setCartItems] = useState({});
     const addToCart = (ItemId) => {
@@ -22,13 +22,29 @@ const StoreContextProvider = (props) => {
             }else{
                 return {...prev,[ItemId]:prev[ItemId]-1}
             }
+            
         })
+    }
+    
+    const getTotalCartAmount = () => {
+        let totalAmount = 0;
+        for(const item in cartItems){
+          
+            if(cartItems[item]>0){ 
+                 let itemInfo = food_list.find(product => product._id === item);
+                totalAmount += cartItems[item] * itemInfo.price;
+            }
+
+        }
+        console.log(totalAmount);
+        return totalAmount;
     }
     const contextValue = {
         food_list,
         cartItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getTotalCartAmount
 
     }
     return(

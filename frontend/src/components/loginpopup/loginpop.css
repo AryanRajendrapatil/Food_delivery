@@ -1,0 +1,128 @@
+.login-popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(110, 44, 44, 0.1) ;
+    backdrop-filter: blur(4px) ;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height:900px;
+}
+.login-popup-container{
+    place-self: center;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    height: 400px;
+    transition: height 0.3s ;
+    animation: fadeIn 0.3s;
+    box-shadow: 0 0 10px rgba(48, 46, 46, 0.1);
+    border-radius: 30px;
+}
+.login-popup-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.login-popup-title h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.login-popup-title img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.login-popup-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    
+}
+.login-popup-inputs input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.login-popup-inputs input:focus{
+    outline: none;
+    border-color: #007bff;
+}
+.login-popup-button{
+    width: 100%;
+    padding: 50px;
+    background-color:tomato;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.login-popup-button:hover{
+    background-color: #0056b3;
+}
+.login-popup-switch{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.login-popup-switch span{
+    color: #007bff;
+    cursor: pointer;
+}   
+.button{
+    background-color: tomato;
+    color: #0a0a0a;
+    border: 1px solid #0a0a0a;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.button:hover{
+    background-color: #48b300;
+}
+.button:active{
+    background-color: #0056b3;
+}
+.login-popup-condition{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.login-popup-switch span{
+    color:tomato;
+    cursor: pointer;
+}
+

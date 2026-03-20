@@ -35,3 +35,61 @@
     cursor: pointer;
     font-weight: 500;
 }
+@media   (max-width:1080px) {
+    .header{
+        height: 34vw;
+        margin: 30px auto;
+        background: url(header_img.png) no-repeat center;
+        background-size: contain;
+        position: relative;
+    }
+    .header-contents{
+        position: absolute;
+        diplay: flex;
+        flex-direction: column;
+        align-items: start;
+        gap:1.5vw;
+        max-width: 50%;
+        bottom: 10%;
+        left: 6vw;
+        animation: fadeIn 2s ease-in-out;
+    }
+    .header-contents h1{
+        font-weight: 500;
+        color: white;
+        font-size: max(4.5vw, 24px);
+    }
+    .header-contents p{
+        color: white;
+        font-size: max(1.5vw, 12px);
+    }
+    .header-contents button{
+        background-color: aliceblue;
+        color: black;
+        font-size: max(1vw, 12px);
+        padding: 1.2vw 2.3vw;
+        border-radius: 36px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .header-contents h1{
+        font-weight: 500;
+        color: white;
+        font-size: max(4.5vw, 24px);
+    }
+    .header-contents p{
+        color: white;
+        font-size: max(1.5vw, 12px);
+    }
+    .header-contents button{
+        background-color: aliceblue;
+        color: black;
+        font-size: max(1vw, 12px);
+        padding: 1.2vw 2.3vw;
+        border-radius: 36px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
