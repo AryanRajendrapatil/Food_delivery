@@ -1,0 +1,70 @@
+.order{
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    
+}
+.order p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.order-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 14px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+
+    
+}
+.order-table thead{
+    background-color: #f9f9f9;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.order-table th{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+.order-table td{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+.order-table img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.order-table .delete{
+    color: red;
+    cursor: pointer;
+}
+.order-table .edit{
+    color: blue;
+    cursor: pointer;
+}
+.order-table .delete:hover{
+    color: darkred;
+}
+.order-table .edit:hover{
+    color: darkblue;
+}
