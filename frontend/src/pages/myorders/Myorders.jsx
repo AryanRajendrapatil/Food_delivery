@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './myorders.css'
-import { storeContext } from '../../context/storeContext'
-
+import { storeContext } from '../../context/Context'
+import axios from 'axios'
+import { assets } from '../../assets/frontend_assets/assets'
 const Myorders = () => {
     const {url,token} = useContext(storeContext)
     const [orders,setOrders] = useState([])
-    const fetchOrders = async()=>{
-        const response = await axios.post(url+"/api/order/userorders",{},{headers:{token}})
-        setOrders(response.data.data)
-    }
     useEffect(()=>{
+        const fetchOrders = async()=>{
+            const response = await axios.post(url+"/api/order/userorders",{},{headers:{token}})
+            setOrders(response.data.data)
+        }
         if(token){
             fetchOrders()
         }
-    },[token])
+    },[token, url])
   return (
     <div className='myorders'>
         <h2>My Orders</h2>

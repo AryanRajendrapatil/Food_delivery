@@ -1,47 +1,73 @@
-.myorders{
-    margin-top: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 100px;
+.myorders {
+  margin: 50px 0;
 }
-.myorders h2{
-    font-weight: 600;
-    color: #282828;
-    margin-bottom: 30px;
+
+.myorders h2 {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 30px;
 }
-.order{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #e2e2e2;
-    border-radius: 10px;
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.order img{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
+
+.order {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.95rem;
+  padding: 20px;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.order p{
-    font-size: 14px;
-    color: #282828;
+
+.order:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
-.order button{
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+.order img {
+  width: 45px;
+  filter: hue-rotate(330deg);
 }
-.order button:hover{
-    background-color: #ff6b6b;
+
+.order p b {
+  color: var(--primary);
 }
-.order button:nth-child(7){
-    background-color: #ff6b6b;
+
+.order button {
+  border: none;
+  padding: 12px 0;
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 600;
+  cursor: pointer;
 }
-.order button:nth-child(8){
-    background-color: #ff6b6b;
+
+.order button:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .order {
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 15px;
+  }
+  .order button { grid-column: auto; }
+}
+
+@media (max-width: 600px) {
+  .order {
+    grid-template-columns: 1fr;
+  }
 }

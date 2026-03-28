@@ -1,74 +1,86 @@
-.footer{
-    color: white;
-   background-color: #282828;
-   margin-top: 100px;
+.footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 80px 10vw 40px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
 }
-.footer-content-left{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+.footer-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.footer-content-center{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+.footer-content-left h1.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+  margin-bottom: -10px;
 }
-.footer-content-right{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+.footer-content-left p {
+  line-height: 1.6;
+  max-width: 400px;
 }
-.footer-content-left img{
-    width: 100px;
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
 }
-.footer-content-center ul{
-    list-style: none;
+
+.footer-social-icons img {
+  width: 35px;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
 }
-.footer-content-right ul{
-    list-style: none;
+
+.footer-social-icons img:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
 }
-.footer-content-center ul li{
-    margin-bottom: 10px;
+
+.footer-content h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
 }
-.footer-content-right ul li{
-    margin-bottom: 10px;
+
+.footer-content li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
 }
-.footer-content-center ul li:hover{
-    color: tomato;
+
+.footer-content li:hover {
+  color: white;
 }
-.footer-content-right ul li:hover{
-    color: tomato;
+
+.footer hr {
+  border: none;
+  height: 1px;
+  background-color: #334155;
+  margin: 20px 0;
 }
-.footer-content-left p{
-    max-width: 300px;
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
 }
-.icons img{
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    cursor: pointer; 
-    border-radius: 50%;
-  
-}
-.footer-copyright{
-    text-align: center;
-    margin-top: 20px;
-}
-.footer-copyright p{
-    color: black;
-}
-hr{
-    border: none;
-    height: 2px;
-    background-color:white;
-}
-.top{
-    background-color: tomato;
-    height: 2px;
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }

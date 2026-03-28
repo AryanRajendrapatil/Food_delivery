@@ -7,7 +7,7 @@ const Footer = () => {
         <hr className='top'/>
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo} alt="" />
+                <h1 className='logo'>Snackr.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
             </div>
             <div className="icons">
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
         </div>
         <hr />
-        <p className='footer-copyright'>Copyright 2026 Tomato.com - All Rights Reserved.</p>
+        <p className='footer-copyright'>Copyright 2026 Snackr.com - All Rights Reserved.</p>
     </div>
   )
 }
